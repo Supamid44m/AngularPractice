@@ -1,16 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<main class="main">
+  <mat-card appearance="outlined" class="main-card">
+    <mat-card-content>
+      <app-profile
+        [profile]="profile"
+        (updatedProfile)="updateProfile($event)"
+      ></app-profile>
+    </mat-card-content>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+    <mat-card-content>
+      <app-contact>
 
-<body>
-  <div>
-    <app-profile  [profile]="profile"></app-profile>
-  </div>
-</body>
+      </app-contact>
+    </mat-card-content>
 
-</html>
+    <mat-card-content>
+      <app-education [educationList]="educationList"></app-education>
+    </mat-card-content>
+
+    <mat-card-content>
+      <app-skill [skillList]="skillList" (updatedSkills)="updateSkills($event)"></app-skill>
+    </mat-card-content>
+
+    <mat-card-content>
+      <app-interests [interestsList]="interestsList" (updatedInterests)="updateInterests($event)"></app-interests>
+    </mat-card-content>
+
+    <mat-card-content>
+      <app-guild [guildList]="guildList" (updateGuilds)="updateGuilds($event)"></app-guild>
+    </mat-card-content>
+
+   <mat-card-actions>
+    <button (click)="onSubmit()">
+      save
+    </button>
+   </mat-card-actions>
+
+  </mat-card>
+</main>
+
+<router-outlet></router-outlet>

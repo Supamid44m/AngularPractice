@@ -1,10 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-</body>
-</html>
+<mat-card class="container-card">
+  <mat-card-title class="card-title">USER INFORMATION</mat-card-title>
+  <mat-card-content>
+    <mat-card class="profile-inner-card">
+      <div class="banner-image">
+        <img class="banner-photo" src="assets/images/banner.jpg" />
+
+        <div class="edit-banner-image-button">
+          <button>EDIT COVER PHOTO</button>
+        </div>
+      </div>
+      <div class="profile-image"></div>
+      <div class="profile-input">
+        <div class="profile-input-group">
+          <div>
+            <label>USER NAME</label>
+            <input
+              type="text"
+              [(ngModel)]="profileInfo.userName"
+              (ngModelChange)="onProfileChange()"
+            />
+          </div>
+          <div>
+            <label>NICK NAME</label>
+            <input
+              type="text"
+              [(ngModel)]="profileInfo.nickName"
+              (ngModelChange)="onProfileChange()"
+            />
+          </div>
+          <div>
+            <label>FIRST NAME</label>
+            <input
+              type="text"
+              [(ngModel)]="profileInfo.firstName"
+              (ngModelChange)="onProfileChange()"
+            />
+          </div>
+          <div>
+            <label>LAST NAME</label>
+            <input
+              type="text"
+              [(ngModel)]="profileInfo.lastName"
+              (ngModelChange)="onProfileChange()"
+            />
+          </div>
+
+          <div>
+            <label>POSITION</label>
+            <input
+              type="text"
+              [(ngModel)]="profileInfo.position"
+              (ngModelChange)="onProfileChange()"
+            />
+          </div>
+
+          <div>
+            <label>NATIONALITY</label>
+            <input
+              type="text"
+              [(ngModel)]="profileInfo.nationality"
+              (ngModelChange)="onProfileChange()"
+            />
+          </div>
+
+          <div>
+            <label>TELEPHONE NUMBER</label>
+            <input
+              type="text"
+              [(ngModel)]="profileInfo.telephoneNumber"
+              (ngModelChange)="onProfileChange()"
+            />
+          </div>
+
+          <div>
+            <label>STARTING DATE</label>
+            <input type="text" (ngModelChange)="onProfileChange()" />
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </mat-card-content>
+</mat-card>

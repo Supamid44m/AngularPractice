@@ -1,0 +1,22 @@
+<mat-card class="container-card">
+    <mat-card-title class="card-title">GUILD INFORMATION</mat-card-title>
+    <mat-card-content class="guild-card-content">
+      <div class="guild-info-button">
+        <div class="add-guild-button">
+          <button (click)="onAddGuild()">ADD SKILL</button>
+        </div>
+        <div class="guild-info">
+          <div class="guild-item" *ngFor="let guild of guilds; let i = index">
+            <span>{{ guild.name }}</span>
+            <div class="delete-button">
+              <fa-icon
+                [icon]="faCircleXmark"
+                (click)="onDeleteGuild(i)"
+              ></fa-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

@@ -3,7 +3,7 @@ export interface Profile {
     nickName: string
     firstName: string
     lastName: string
-    posistion: string
+    position: string
     nationality: string
     telephoneNumber: string
     startDate : Date

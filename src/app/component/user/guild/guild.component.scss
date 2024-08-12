@@ -1,0 +1,59 @@
+.container-card {
+  background-color: white;
+  margin-top: 50px;
+}
+
+.card-title {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.guild-card-content {
+  padding-left: 15%;
+}
+
+.add-guild-button {
+  button {
+    border: 1px solid #11abc1;
+    border-radius: 20px;
+    padding: 5px;
+    padding-inline: 10px;
+    background-color: white;
+    color: #11abc1;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #11abc1;
+      color: white;
+    }
+  }
+}
+
+.guild-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+
+  .guild-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #11abc1;
+    border-radius: 20px;
+    padding: 2px;
+    padding-inline: 10px;
+    background-color: #11abc1;
+    color: white;
+    margin-right: 10px;
+    align-items: center;
+    width: 105px;
+    margin-top: 10px;
+
+    .delete-button {
+      margin-left: 5px;
+    }
+  }
+}

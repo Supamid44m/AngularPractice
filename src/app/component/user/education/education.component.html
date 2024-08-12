@@ -1,0 +1,17 @@
+<mat-card class="container-card">
+    <mat-card-title class="card-title">EDUCATIONAL INFORMATION</mat-card-title>
+    <mat-card-content>
+        
+            <p-timeline [value]="education" [style]="{}">
+              
+                <ng-template pTemplate="content" let-education let-i="index">
+                    <small class="p-text-secondary">{{education.universityName}}</small>
+                    <!-- <button (click)="removeEducation(i)"></button> -->
+                </ng-template>
+                <ng-template pTemplate="opposite" let-education>
+                    <small class="p-text-secondary">{{education.educationDate}}</small>
+                </ng-template>
+            </p-timeline>
+       
+    </mat-card-content>
+</mat-card>

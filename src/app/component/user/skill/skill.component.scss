@@ -1,0 +1,56 @@
+.container-card {
+  background-color: white;
+  margin-top: 50px;
+}
+.card-title {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.skill-card-content {
+    padding-left: 15%;
+}
+
+.skill-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  flex-wrap: wrap;
+
+  .skill-name {
+    width: 40px;
+  }
+
+  .skill-level{
+    width: 40px;
+  }
+}
+
+.skill-level-bar {
+  width: 300px;
+  background-color: #efeded;
+}
+
+.p-progressbar-determinate .p-progressbar-label {
+  display: none !important;
+}
+
+.add-skill-button {
+  button {
+    border: 1px solid #11abc1;
+    border-radius: 20px;
+    padding: 5px;
+    padding-inline: 10px;
+    background-color: white;
+    color: #11abc1;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #11abc1;
+      color: white;
+    }
+  }
+}

@@ -1,4 +1,4 @@
 export interface Education {
-    universityName: string;
-    educationDate: Date;
+  universityName: string;
+  educationDate: string;
 }

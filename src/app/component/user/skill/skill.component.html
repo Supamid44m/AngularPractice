@@ -1,0 +1,22 @@
+<mat-card class="container-card">
+    <mat-card-title class="card-title">SKILL INFORMATION</mat-card-title>
+    <mat-card-content class="skill-card-content">
+        <div class="skill-info-button">
+            <div class="add-skill-button">
+                <button (click)="addSkill()">ADD SKILL</button>
+            </div>
+            <div class="skill-info" *ngFor="let skill of skills">
+                <div class="skill-name">
+                    <span>{{skill?.name}}</span>
+                </div>
+                <div class="skill-level">
+                    <span>{{skill?.level}}</span>
+                </div>
+                <div>
+                    <p-progressBar value={{skill.level*10}} mode="determinate" [style]="{'width': '150px','height':'15px'}" [showValue]='false' ></p-progressBar>
+                </div> 
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+

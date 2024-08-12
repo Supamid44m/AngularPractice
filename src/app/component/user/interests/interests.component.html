@@ -1,0 +1,21 @@
+<mat-card class="container-card">
+  <mat-card-title class="card-title">INTERESTS INFORMATION</mat-card-title>
+  <mat-card-content class="interests-card-content">
+    <div class="interests-info-button">
+      <div class="add-interests-button">
+        <button (click)="onAddInterests()">ADD SKILL</button>
+      </div>
+      <div class="interests-info">
+        <div class="interests-item" *ngFor="let interest of interests; let i = index">
+          <span>{{ interest.name }}</span>
+          <div class="delete-button">
+            <fa-icon
+              [icon]="faCircleXmark"
+              (click)="onDeleteInterest(i)"
+            ></fa-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
