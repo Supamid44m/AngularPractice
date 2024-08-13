@@ -14,6 +14,7 @@ import { TimelineModule } from 'primeng/timeline';
 })
 export class EducationComponent {
   @Input() educationList: Education[] = [];
+  @Output() updateEducation = new EventEmitter<Education[]>()
 
   education: Education[] = [];
 
@@ -26,7 +27,16 @@ export class EducationComponent {
   removeEducation(index: number) {
     if (index > -1 && index < this.educationList.length) {
       this.educationList.splice(index, 1);
-      console.log("test")
     }
+  }
+
+  onAddEducation(){
+    const newEducation : Education={
+      universityName: 'University',
+      educationDate: 'Year'
+    }
+    this.educationList.push(newEducation);
+    this.education = [...this.educationList];
+    this.updateEducation.emit(this.education)
   }
 }

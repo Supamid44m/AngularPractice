@@ -19,6 +19,7 @@ import { SkillComponent } from './component/user/skill/skill.component';
 import { InterestsComponent } from './component/user/interests/interests.component';
 import { GuildComponent } from './component/user/guild/guild.component';
 import Swal from 'sweetalert2';
+import { ExperienceComponent } from './component/user/experience/experience.component';
 
 @Component({
   selector: 'app-root',
@@ -32,7 +33,8 @@ import Swal from 'sweetalert2';
     EducationComponent,
     SkillComponent,
     InterestsComponent,
-    GuildComponent
+    GuildComponent,
+    ExperienceComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -103,16 +105,23 @@ export class AppComponent {
     this.contact = newContact;
   }
 
+  updateEducation(newEducation:Education[]){
+    this.educationList = [...newEducation]
+  }
+  updateExperience(newExperience:Experience[]){
+    this.experienceList = [...newExperience]
+  }
+
   updateSkills(newSkills: Skill[]) {
-    this.skillList = newSkills;
+    this.skillList = [...newSkills];
   }
 
   updateInterests(newInterests:Interests[]){
-    this.interestsList = newInterests
+    this.interestsList = [...newInterests]
   }
 
   updateGuilds(newGuilds:Guild[]){
-    this.guildList = newGuilds
+    this.guildList = [...newGuilds]
   }
 
   onSubmit() {
@@ -128,23 +137,23 @@ export class AppComponent {
 
     console.log(updateUserBody)
 
-    // Swal.fire({
-    //   title: "Do you want to save the changes?",
-    //   showCancelButton: true,
-    //   confirmButtonText: "Save",
-    //   confirmButtonColor :"#11abc1"
-    // }).then((result) => {
-    //   if (result.isConfirmed) {
-    //     this.userService.updateProfile(updateUserBody).subscribe({
-    //       next: (res) => { console.log("Profile updated successfully", res) },
-    //       error: (err) => { console.log(err) }
-    //     })
-    //     setTimeout(()=>{
-    //       window.location.reload();
-    //     },500)
+    Swal.fire({
+      title: "Do you want to save the changes?",
+      showCancelButton: true,
+      confirmButtonText: "Save",
+      confirmButtonColor :"#11abc1"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.userService.updateProfile(updateUserBody).subscribe({
+          next: (res) => { console.log("Profile updated successfully", res) },
+          error: (err) => { console.log(err) }
+        })
+        setTimeout(()=>{
+          window.location.reload();
+        },500)
 
-    //   }
-    // });
+      }
+    });
 
   }
 }

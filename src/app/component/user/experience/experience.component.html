@@ -1,0 +1,33 @@
+<mat-card class="container-card">
+    <mat-card-title class="card-title">EXPERIENCE INFORMATION</mat-card-title>
+    <mat-card-content class="card-content">
+
+        <div class="">
+            <div class="add-edu-button">
+                <button (click)="onAddEducation()">ADD EXPERIENCE</button>
+            </div>
+
+        </div>
+    </mat-card-content>
+    <mat-card-content>
+        <p-timeline [value]="experineces" class="time-line">
+
+
+            <ng-template pTemplate="content" *ngFor="let experinece of experineces ;let i = index">
+                <div class="exp-item">
+                    <div class="exp-name">
+                        <small class="p-text-secondary">{{experinece.companyName}}</small>
+
+                        <div class="exp-position">
+                            <small class="p-text-secondary">{{experinece.position}}</small>
+                        </div>
+                    </div>
+                    <div class="faXmark-icon">
+                        <fa-icon [icon]="faXmark" (click)="removeEducation(i)"></fa-icon>
+                    </div>
+                </div>
+            </ng-template>
+
+        </p-timeline>
+    </mat-card-content>
+</mat-card>

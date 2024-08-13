@@ -1,9 +1,79 @@
-.container-card{
+.container-card {
     background-color: white;
     margin-top: 50px;
 }
 
-.card-title{
+.card-title {
     margin-left: 20px;
     margin-top: 10px;
+}
+
+.card-content{
+    padding-left: 19%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 20%;
+    // width: 60%;
+}
+
+.user-contract-contrainner {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 20%;
+}
+
+.user-contract-address {
+    // flex-grow: 3;
+}
+
+.user-contract-district-info {
+    margin-top: 10px;
+    display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+
+    input {
+        width: 80%;
+    }
+}
+
+.user-contract-social {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // gap: 20px;
+
+    input {
+        width: 100%;
+    }
+
+
+    .user-contract-instagram {
+        margin-right: 52px;
+    }
+}
+
+
+@media only screen and (max-width: 1203px) {
+
+    .user-contract-social {
+        input {
+            width: 100%;
+        }
+    }
+}
+
+.address-contract-contriner {
+    textarea {
+        width: 100%;
+    }
+}
+
+.user-contract-info-contrainer {
+    width: 75%;
 }

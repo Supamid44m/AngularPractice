@@ -1,0 +1,65 @@
+.container-card {
+    background-color: white;
+    margin-top: 50px;
+}
+
+.card-title {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.card-content{
+    padding-left: 19%;
+    margin-top: 10px;
+}
+
+
+.add-edu-button {
+    button {
+        border: 1px solid #11abc1;
+        border-radius: 20px;
+        padding: 5px;
+        padding-inline: 10px;
+        background-color: white;
+        color: #11abc1;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #11abc1;
+            color: white;
+        }
+    }
+}
+
+
+.p-timeline-event{
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+.exp-item{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 5px;
+    padding-block: 5px;
+    padding-inline: 10px;
+    border-radius: 10px;
+    
+
+    .exp-name{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .delete-exp-button {
+        align-self: center;
+        right: auto;
+        margin-right: 10px;
+    }
+}

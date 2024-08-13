@@ -13,3 +13,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .container-card{
     background-color: white;
 }
+
+
+input,textarea{
+    border-radius: 3px;
+    outline: none;
+    border-color: rgb(179, 177, 177);
+    resize: none;
+}

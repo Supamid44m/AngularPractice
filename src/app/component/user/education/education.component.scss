@@ -1,11 +1,41 @@
-.container-card{
+.container-card {
     background-color: white;
     margin-top: 50px;
 }
 
-.card-title{
+.card-title {
     margin-left: 20px;
     margin-top: 10px;
 }
 
+.card-content {
+    padding-left: 19%;
+    margin-top: 10px;
+}
 
+
+.add-edu-button {
+    button {
+        border: 1px solid #11abc1;
+        border-radius: 20px;
+        padding: 5px;
+        padding-inline: 10px;
+        background-color: white;
+        color: #11abc1;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #11abc1;
+            color: white;
+        }
+    }
+}
+
+
+
+
+
+
+.p-timeline {
+    margin-right: auto !important;
+}

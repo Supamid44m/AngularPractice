@@ -1,3 +1,85 @@
 <mat-card class="container-card">
     <mat-card-title class="card-title">CONTACT INFORMATION</mat-card-title>
+    <mat-card-content class="card-content">
+        <div class="user-contract-address">
+        
+            <div class="address-contract-contriner">
+                <label>
+                    ADDRESS
+                </label>
+                <textarea 
+                value={{contactInfo.address}} 
+                [(ngModel)]="contactInfo.address"
+                (ngModelChange)="onContractChange()"></textarea>
+            </div>
+        </div>
+
+        <div class="user-contract-district-info">
+            <div>
+                <label>
+                    SUB DISTRICT
+                </label>
+                <input type="text" [(ngModel)]="contactInfo.subDistrict" (ngModelChange)="onContractChange()">
+            </div>
+
+            <div>
+                <label>
+                    DISTRICT
+                </label>
+                <input type="text" 
+                [(ngModel)]="contactInfo.district"
+                (ngModelChange)="onContractChange()">
+            </div>
+
+            <div>
+                <label>
+                    PROVINCE
+                </label>
+                <input type="text" 
+                [(ngModel)]="contactInfo.province"
+                (ngModelChange)="onContractChange()">
+            </div>
+
+            <div>
+                <label>
+                    POSTAL CODE
+                </label>
+                <input type="text" 
+                [(ngModel)]="contactInfo.postalCode"
+                (ngModelChange)="onContractChange()">
+            </div>
+
+        </div>
+
+        <div class="user-contract-social">
+            <div>
+                <label>
+                    FACEBOOK
+                </label>
+                <input type="text" 
+                [(ngModel)]="contactInfo.facebook"
+                (ngModelChange)="onContractChange()">
+            </div>
+
+            <div>
+                <label>
+                    LINE ID
+                </label>
+                <input type="text" 
+                [(ngModel)]="contactInfo.line"
+                (ngModelChange)="onContractChange()">
+            </div>
+
+            <div class="user-contract-instagram">
+                <label>
+                    INSTAGRAM
+                </label>
+                <input type="text" 
+                [(ngModel)]="contactInfo.instagram"
+                (ngModelChange)="onContractChange()">
+            </div>
+
+        </div>
+
+    </mat-card-content>
 </mat-card>

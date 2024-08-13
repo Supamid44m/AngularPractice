@@ -8,13 +8,17 @@
     </mat-card-content>
 
     <mat-card-content>
-      <app-contact>
-
+      <app-contact [contact]="contact"
+      (updatedContact)="updateContact($event)">
       </app-contact>
     </mat-card-content>
 
     <mat-card-content>
-      <app-education [educationList]="educationList"></app-education>
+      <app-education [educationList]="educationList" (updateEducation)="updateEducation($event)"></app-education>
+    </mat-card-content>
+
+    <mat-card-content>
+      <app-experience [experienceList]="experienceList" (updateExperience)="updateExperience($event)"></app-experience>
     </mat-card-content>
 
     <mat-card-content>
